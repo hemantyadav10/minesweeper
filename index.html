@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/minesweeper-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+  </noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minesweeper</title>
+  <script>
+    const theme = localStorage.getItem("vite-ui-theme") || "system";
+    if (theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
